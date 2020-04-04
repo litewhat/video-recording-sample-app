@@ -1,0 +1,37 @@
+{:deps    {org.clojure/clojure       {:mvn/version "1.10.1"}
+           org.clojure/clojurescript {:mvn/version "1.10.597"}
+
+           reagent                   {:mvn/version "0.9.1"}
+           re-frame                  {:mvn/version "0.11.0"}
+
+           metosin/reitit            {:mvn/version "0.3.10"}
+           metosin/spec-tools        {:mvn/version "0.10.0"}
+
+           binaryage/oops            {:mvn/version "0.7.0"}
+           cljs-http                 {:mvn/version "0.1.46"}
+
+           funcool/cuerdas           {:mvn/version "2.2.0"}
+           com.taoensso/timbre       {:mvn/version "4.10.0"}
+           }
+
+ :paths   ["src/clj" "src/cljs" "resources"]
+
+ :aliases {:dev          {:extra-paths ["dev/src/cljs"]
+                          :extra-deps  {thheller/shadow-cljs {:mvn/version "2.8.83"}
+                                        binaryage/devtools   {:mvn/version "1.0.0"}
+                                        re-frisk             {:mvn/version "0.5.4.1"}}
+                          :main-opts   ["-m" "shadow.cljs.devtools.cli" "watch" "dev"]}
+
+           :prod         {:main-opts ["-m" "shadow.cljs.devtools.cli" "release" "app"]}
+
+           ; "build-report" ["with-profile" "prod" "do"
+           ;                 ["run" "-m" "shadow.cljs.devtools.cli" "run" "shadow.cljs.build-report" "app" "target/build-report.html"]
+           ;                 ["shell" "open" "target/build-report.html"]]
+           ; "karma"        ["with-profile" "prod" "do"
+           ;                 ["run" "-m" "shadow.cljs.devtools.cli" "compile" "karma-test"]
+           ;                 ["shell" "karma" "start" "--single-run" "--reporters" "junit,dots"]]}
+
+           :lib-versions {:extra-deps {olical/depot {:mvn/version "1.8.4"}}
+                          :main-opts  ["-m" "depot.outdated.main" "-a"]}
+           }}
+
