@@ -5,8 +5,9 @@
  :builds {:dev {:target     :browser
                 :output-dir "resources/public/js"
                 :asset-path "/js"
-                :modules    {:app {:init-fn  video-recording-sample-app.core/init
-                                   :preloads [devtools.preload]}}
+                :modules    {:app {:init-fn  video-recording-sample-app.core/init!
+                                   :preloads [devtools.preload
+                                              re-frisk.preload]}}
                 :devtools   {:http-root "resources/public"
                              :http-port 8090
                              }}}}
