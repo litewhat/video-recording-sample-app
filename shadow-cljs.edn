@@ -8,6 +8,10 @@
                 :modules    {:app {:init-fn  video-recording-sample-app.core/init!
                                    :preloads [devtools.preload
                                               re-frisk.preload]}}
+                :js-options {:resolve {"RecordRTC" {:target  :npm
+                                                    :require "recordrtc"}
+                                       "videojs"   {:target  :npm
+                                                    :require "video.js"}}}
                 :devtools   {:http-root "resources/public"
                              :http-port 8090
                              }}}}
