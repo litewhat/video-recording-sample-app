@@ -24,7 +24,8 @@
 (def router
   (rfd/router
     ["" {:coercion reitit.coercion.spec/coercion}
-     ["/" {:name ::home}]]
+     ["/" {:name ::home}]
+     ["/videojs-record" {:name ::videojs-record}]]
     {:compile rc/compile-request-coercers}))
 
 (defn dev-setup []
