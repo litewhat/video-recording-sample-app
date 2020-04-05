@@ -1,13 +1,14 @@
 (ns video-recording-sample-app.views
   (:require
    [re-frame.core :as rf]
-   [video-recording-sample-app.subs :as subs]))
+   [video-recording-sample-app.subs :as subs]
+   ["videojs-record" :as videojs-record]))
 
 (defn home []
   [:div
    [:h1 "Hello from HOME"]
    [:div [:a {:href "/"} "home"]]
-   [:div [:a {:href "/abc"} "abc"]]])
+   [:div [:a {:href "/videojs-record"} "videojs-record"]]])
 
 (defn not-found []
   [:div
