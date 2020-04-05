@@ -1,16 +1,16 @@
 (ns video-recording-sample-app.core
   (:require
-   [reagent.core :as r]
-   [re-frame.core :as rf]
-   [re-frame.db :as rfdb]
-   [reitit.frontend :as rfd]
-   [reitit.frontend.easy :as rfe]
-   [reitit.frontend.controllers :as rfc]
-   [reitit.coercion :as rc]
-   [reitit.coercion.spec]
-   [video-recording-sample-app.events :as events]
-   [video-recording-sample-app.views :as views]
-   [video-recording-sample-app.config :as config]))
+    [reagent.core :as r]
+    [re-frame.core :as rf]
+    [re-frame.db :as rfdb]
+    [reitit.frontend :as rfd]
+    [reitit.frontend.easy :as rfe]
+    [reitit.frontend.controllers :as rfc]
+    [reitit.coercion :as rc]
+    [reitit.coercion.spec]
+    [video-recording-sample-app.events :as events]
+    [video-recording-sample-app.views :as views]
+    [video-recording-sample-app.config :as config]))
 
 (defn on-navigate!
   [match _history]
